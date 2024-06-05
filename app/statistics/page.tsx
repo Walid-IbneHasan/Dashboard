@@ -23,7 +23,7 @@ const StatisticsPage = () => {
   return (
     <div className="mt-5 container">
       <div className="mb-5 font-semibold">Statistics</div>
-      <div className="grid grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 xl:gap-8">
         {StatisticsCardDetailsOne.map((item, index) => (
           <StatisticsCardOne
             key={index}
@@ -53,14 +53,14 @@ const StatisticsPage = () => {
             footer={item.footer}
           />
         ))}
-        <div className="col-span-2">
+        <div className="xl:col-span-2">
           <StatisticsAddFundCard />
         </div>
-        <div className=" col-start-3 col-end-5">
+        <div className=" xl:col-start-3 xl:col-end-5">
           <PremiumMembershipCard />
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-8 mt-8">
+      <div className="grid grid-cols-1 xl:grid-cols-3 gap-4 xl:gap-8 mt-8">
         {StatisticsColorCardDetails.map((item, index) => (
           <StatisticsColorCard
             key={index}

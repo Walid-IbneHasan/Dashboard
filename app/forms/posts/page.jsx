@@ -15,7 +15,7 @@ const FormsPostsPage = () => {
         <p>Forms</p>
         <p>Forms &gt; Posts</p>
       </div>
-      <div className="flex gap-5">
+      <div className="flex flex-col xl:flex-row gap-5">
         <Card className="w-full my-5 p-5 rounded-md border border-slate-500 bg-blue-200">
           <p className="my-5 col-span-5">Add Post</p>
           <Input className="mb-5" placeholder="Title" />

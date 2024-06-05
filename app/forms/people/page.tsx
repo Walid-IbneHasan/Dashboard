@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
 const FormsPeople = () => {
-  const [startDate, setStartDate] = useState(null);
+  const [startDate, setStartDate] = useState<Date | null>(null);
 
   return (
     <div className="container">
@@ -25,7 +25,7 @@ const FormsPeople = () => {
             <span className="border-b-2 pb-2 border-black">Peop</span>le
             Information
           </CardTitle>
-          <div className="grid grid-cols-4 gap-5">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
             <div className="flex flex-col gap-1">
               <Label htmlFor="fname" className="flex-nowrap">
                 Name
@@ -67,7 +67,7 @@ const FormsPeople = () => {
               <Label htmlFor="dob">Date of Birth</Label>
               <DatePicker
                 selected={startDate}
-                onChange={(date) => setStartDate(date)}
+                onChange={(date: Date) => setStartDate(date)}
                 className="p-1 border-l-red-500 border-l-2 rounded-none border w-full"
                 placeholderText="Select date"
                 id="dob"
@@ -113,30 +113,30 @@ const FormsPeople = () => {
             <span className="border-b-2 pb-2 border-black">Pare</span>nts
             Information
           </CardTitle>
-          <div className="grid grid-cols-4 gap-5">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
             <div className="flex flex-col gap-1">
-              <Label htmlFor="fatherName">Father's Name</Label>
+              <Label htmlFor="fatherName">Father&apos;s Name</Label>
               <Input
                 id="fatherName"
                 className="p-1 border-l-red-500 border-l-2 rounded-none"
               />
             </div>
             <div className="flex flex-col gap-1">
-              <Label htmlFor="fatherOccupation">Father's Occupation</Label>
+              <Label htmlFor="fatherOccupation">Father&apos;s Occupation</Label>
               <Input
                 id="fatherOccupation"
                 className="p-1 border-l-red-500 border-l-2 rounded-none"
               />
             </div>
             <div className="flex flex-col gap-1">
-              <Label htmlFor="motherName">Mother's Name</Label>
+              <Label htmlFor="motherName">Mother&apos;s Name</Label>
               <Input
                 id="motherName"
                 className="p-1 border-l-red-500 border-l-2 rounded-none"
               />
             </div>
             <div className="flex flex-col gap-1">
-              <Label htmlFor="motherOccupation">Mother's Occupation</Label>
+              <Label htmlFor="motherOccupation">Mother&apos;s Occupation</Label>
               <Input
                 id="motherOccupation"
                 className="p-1 border-l-red-500 border-l-2 rounded-none"
@@ -186,7 +186,6 @@ const FormsPeople = () => {
             </div>
           </div>
           <div className="flex gap-5 my-5">
-            {" "}
             <Button className="bg-emerald-500 rounded-sm hover:bg-emerald-700">
               Save
             </Button>

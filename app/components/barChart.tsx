@@ -1,5 +1,12 @@
 "use client";
 import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+} from "@/components/ui/card";
+import {
   BarChart,
   CartesianGrid,
   XAxis,
@@ -7,6 +14,7 @@ import {
   Tooltip,
   Legend,
   Bar,
+  ResponsiveContainer,
 } from "recharts";
 
 const data = [
@@ -47,18 +55,28 @@ const data = [
   },
 ];
 
-const BarChartLite = () => {
+const BarChartComponent = () => {
   return (
-    <BarChart width={500} height={250} data={data} barCategoryGap={50}>
-      <CartesianGrid vertical={false} strokeDasharray="3 3" />
-      <XAxis dataKey="name" axisLine={false} />
-      <YAxis axisLine={false} />
-      <Tooltip />
+    <Card className="rounded-none h-[366px]">
+      <CardHeader>
+        <CardTitle>Sales Analytics</CardTitle>
+        <CardDescription>From Date of 1st Jan 2024</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <ResponsiveContainer height={250}>
+          <BarChart data={data} barCategoryGap={50}>
+            <CartesianGrid vertical={false} strokeDasharray="3 3" />
+            <XAxis dataKey="name" axisLine={false} />
+            <YAxis axisLine={false} />
+            <Tooltip />
 
-      <Bar dataKey="pv" fill="#8884d8" />
-      <Bar dataKey="uv" fill="#93C5FD" />
-    </BarChart>
+            <Bar dataKey="pv" fill="#8884d8" />
+            <Bar dataKey="uv" fill="#93C5FD" />
+          </BarChart>
+        </ResponsiveContainer>
+      </CardContent>
+    </Card>
   );
 };
 
-export default BarChartLite;
+export default BarChartComponent;

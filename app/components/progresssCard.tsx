@@ -27,7 +27,7 @@ const ProgressCard = ({
   color: string;
 }) => {
   return (
-    <Card className="w-[380px] h-[180px] mt-5 rounded-none ">
+    <Card className=" h-[180px] mt-5 rounded-none w-full ">
       <CardHeader className="flex flex-row justify-between items-center">
         <CardTitle>{title}</CardTitle>
         <CardDescription className="py-1 px-2 rounded-none bg-blue-300 text-blue-900">

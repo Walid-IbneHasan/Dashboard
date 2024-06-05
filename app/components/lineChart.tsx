@@ -8,6 +8,7 @@ import {
   Tooltip,
   Legend,
   Line,
+  ResponsiveContainer,
 } from "recharts";
 
 const data = [
@@ -57,19 +58,19 @@ const data = [
 
 const LineChartComponent = () => {
   return (
-    <LineChart
-      width={600}
-      height={430}
-      data={data}
-      margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
-    >
-      <XAxis dataKey="name" />
-      <YAxis />
-      <Tooltip />
-      <Legend />
-      <Line type="monotone" dataKey="pv" stroke="#8884d8" />
-      <Line type="monotone" dataKey="uv" stroke="#93C5FD" />
-    </LineChart>
+    <ResponsiveContainer height={430}>
+      <LineChart
+        data={data}
+        margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+      >
+        <XAxis dataKey="name" />
+        <YAxis />
+        <Tooltip />
+        <Legend />
+        <Line type="monotone" dataKey="pv" stroke="#8884d8" />
+        <Line type="monotone" dataKey="uv" stroke="#93C5FD" />
+      </LineChart>
+    </ResponsiveContainer>
   );
 };
 

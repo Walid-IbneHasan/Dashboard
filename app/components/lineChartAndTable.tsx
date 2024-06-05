@@ -11,7 +11,7 @@ import { DataTableDemo } from "./table";
 
 const LineChartAndTable = () => {
   return (
-    <div className="grid grid-cols-2 gap-5 mt-5">
+    <div className="grid grid-cols-1 gap-5 mt-5 lg:grid lg:grid-cols-2 lg:gap-5">
       <Card className="rounded-none">
         <CardHeader>
           <CardTitle>Total Revenue</CardTitle>

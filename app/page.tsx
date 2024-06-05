@@ -1,7 +1,6 @@
 import { cardDetails } from "@/lib/cardDetails";
 import Navbar from "./components/navbar";
 import ProgressCard from "./components/progresssCard";
-import BarAndPieChart from "./components/barAndPieChart";
 import BarChartLite from "./components/barChart";
 import PieChartLite from "./components/pieChart";
 import AreaChartComponent from "./components/areaChart";
@@ -10,6 +9,8 @@ import { DataTableDemo } from "./components/table";
 import lineChartAndTable from "./components/lineChartAndTable";
 import LineChartAndTable from "./components/lineChartAndTable";
 import { MdArrowUpward } from "react-icons/md";
+import PieChartComponent from "./components/pieChart";
+import BarChartComponent from "./components/barChart";
 
 export default function Home() {
   return (
@@ -20,7 +21,7 @@ export default function Home() {
             <div className="text-black font-semibold">Dashboard</div>
             <div className="font-bold">Achintya Solutions</div>
           </div>
-          <div className="flex space-x-5">
+          <div className="grid grid-col-1 w-full gap-5 sm:grid sm:grid-cols-2 sm:gap-5 lg:flex lg:gap-5">
             {cardDetails.map((card, index) => (
               <ProgressCard
                 key={index}
@@ -33,11 +34,14 @@ export default function Home() {
               />
             ))}
           </div>
-          <div className="grid grid-cols-4 gap-5 mt-5">
-            <div className="col-span-3">
-              <BarAndPieChart />
+          <div className=" grid grid-cols-1 lg:grid-cols-3 gap-5 mt-5">
+            <div>
+              <BarChartComponent />
             </div>
-            <div className="col-span-1">
+            <div>
+              <PieChartComponent />
+            </div>
+            <div>
               <AreaChartComponent />
             </div>
           </div>

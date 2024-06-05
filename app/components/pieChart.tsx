@@ -1,5 +1,12 @@
 "use client";
 
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+} from "@/components/ui/card";
 import { PieChart, Pie } from "recharts";
 
 const data01 = [
@@ -57,28 +64,36 @@ const data02 = [
 
 const PieChartComponent = () => {
   return (
-    <PieChart width={500} height={250}>
-      <Pie
-        data={data01}
-        dataKey="value"
-        nameKey="name"
-        cx="50%"
-        cy="50%"
-        outerRadius={50}
-        fill="#8884d8"
-      />
-      <Pie
-        data={data02}
-        dataKey="value"
-        nameKey="name"
-        cx="50%"
-        cy="50%"
-        innerRadius={60}
-        outerRadius={80}
-        fill="#93C5FD"
-        label
-      />
-    </PieChart>
+    <Card className=" rounded-none h-[366px]">
+      <CardHeader>
+        <CardTitle>Analysis</CardTitle>
+        <CardDescription>From Date of 1st Jan 2024</CardDescription>
+      </CardHeader>
+      <CardContent className="flex items-center">
+        <PieChart width={400} height={250}>
+          <Pie
+            data={data01}
+            dataKey="value"
+            nameKey="name"
+            cx="50%"
+            cy="50%"
+            outerRadius={50}
+            fill="#8884d8"
+          />
+          <Pie
+            data={data02}
+            dataKey="value"
+            nameKey="name"
+            cx="50%"
+            cy="50%"
+            innerRadius={60}
+            outerRadius={80}
+            fill="#93C5FD"
+            label
+          />
+        </PieChart>
+      </CardContent>
+    </Card>
   );
 };
 

@@ -2,13 +2,10 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import BarChartLite from "./barChart";
-import PieChartLite from "./pieChart";
-import RenderBarChart from "./barChart";
+
 import BarChartComponent from "./barChart";
 import PieChartComponent from "./pieChart";
 

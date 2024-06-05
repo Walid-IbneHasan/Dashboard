@@ -12,7 +12,6 @@ import {
   XAxis,
   YAxis,
   Tooltip,
-  Legend,
   Bar,
   ResponsiveContainer,
 } from "recharts";

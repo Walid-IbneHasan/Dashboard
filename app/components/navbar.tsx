@@ -1,42 +1,22 @@
 import { RxDashboard } from "react-icons/rx";
 import { IoDiamondOutline } from "react-icons/io5";
-import {
-  MdOutlineInsertPageBreak,
-  MdOutlineKeyboardArrowDown,
-  MdReadMore,
-} from "react-icons/md";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 import { MdFormatListBulleted } from "react-icons/md";
-import { LuBarChart4 } from "react-icons/lu";
+
 import { FaSearch } from "react-icons/fa";
 import { Input } from "@/components/ui/input";
 import { FaBell } from "react-icons/fa";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { BiStats } from "react-icons/bi";
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
 
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import {
-  Charts,
-  Forms,
-  More,
-  Pages,
-  UiElements,
-} from "@/lib/navbarDropDownContent";
+import { Forms, UiElements } from "@/lib/navbarDropDownContent";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";

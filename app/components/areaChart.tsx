@@ -5,13 +5,11 @@ import {
   CardTitle,
   CardDescription,
   CardContent,
-  CardFooter,
 } from "@/components/ui/card";
 import {
   AreaChart,
   XAxis,
   YAxis,
-  CartesianGrid,
   Tooltip,
   Area,
   ResponsiveContainer,

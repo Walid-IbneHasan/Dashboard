@@ -5,7 +5,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { ReactElement } from "react";
+
 import { IconType } from "react-icons/lib";
 
 const StatisticsCardOne = ({

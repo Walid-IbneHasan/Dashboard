@@ -9,7 +9,6 @@ import {
 } from "@/components/ui/card";
 import { MdArrowUpward } from "react-icons/md";
 import { Progress } from "@/components/ui/progress";
-import ProgressBar from "@ramonak/react-progress-bar";
 
 const ProgressCard = ({
   title,
